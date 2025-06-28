@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+
+<html lang="pt-BR">
+
+<head>
+
+    <meta charset="UTF-8">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>randomizador</title>
+
+    <style>
+
+        body {
+
+            margin: 0;
+
+            padding: 0;
+
+            height: 100vh;
+
+            display: flex;
+
+            justify-content: center;
+
+            align-items: center;
+
+            font-family: Arial, sans-serif;
+
+            background-image: url(https://tse1.mm.bing.net/th/id/OIP.OyPPpX8LZ8250hFT7Nqb-wHaEK?rs=1&pid=ImgDetMain&o=7&rm=3)
+
+            
+
+        }
+
+
+
+        .container {
+
+            background-color: rgba(0, 0, 0, 0.7);
+
+            padding: 20px;
+
+            border-radius: 10px;
+
+            text-align: center;
+
+            color: white;
+
+        }
+
+
+
+        button {
+
+            padding: 10px 20px;
+
+            margin-top: 20px;
+
+            font-size: 16px;
+
+            border: none;
+
+            border-radius: 5px;
+
+            cursor: pointer;
+
+            background-color: #4CAF50;
+
+            color: white;
+
+        }
+
+
+
+        button:hover {
+
+            background-color: #45a049;
+
+        }
+
+
+
+        #result {
+
+            margin-top: 20px;
+
+            font-size: 24px;
+
+        }
+
+    </style>
+
+</head>
+
+<body>
+
+    <div class="container">
+
+        <h1>Randomizador de Nomes</h1>
+
+        <button onclick="randomize()">Aleatorizar</button>
+
+        <p id="result"></p>
+
+    </div>
+
+
+
+    <script>
+
+        const nomes = [
+
+            "Aatrox", "Ahri", "Akali", "Akshan", "Alistar", "Amumu", "Anivia", "Annie", "Aphelios", "Ashe",
+
+            "Aurelion Sol", "Azir", "Bardo", "Bel'Veth", "Blitzcrank", "Brand", "Braum", "Caitlyn", "Camille", 
+
+            "Cassiopeia", "Cho'Gath", "Corki", "Darius", "Diana", "Draven", "Dr. Mundo", "Ekko", "Elise", 
+
+            "Evelynn", "Ezreal", "Fiddlesticks", "Fiora", "Fizz", "Galio", "Gangplank", "Garen", "Gnar", 
+
+            "Gragas", "Graves", "Gwen", "Hecarim", "Heimerdinger", "Illaoi", "Irelia", "Ivern", "Janna", 
+
+            "Jarvan IV", "Jax", "Jayce", "Jhin", "Jinx", "K'Sante", "Kai'Sa", "Kalista", "Karma", "Karthus", 
+
+            "Kassadin", "Katarina", "Kayle", "Kayn", "Kennen", "Kha'Zix", "Kindred", "Kled", "Kog'Maw", 
+
+            "LeBlanc", "Lee Sin", "Leona", "Lillia", "Lissandra", "Lucian", "Lulu", "Lux", "Malphite", 
+
+            "Malzahar", "Maokai", "Master Yi", "Milio", "Miss Fortune", "Mordekaiser", "Morgana", "Naafiri", 
+
+            "Nami", "Nasus", "Nautilus", "Neeko", "Nidalee", "Nilah", "Nocturne", "Nunu e Willump", "Olaf", 
+
+            "Orianna", "Ornn", "Pantheon", "Poppy", "Pyke", "Qiyana", "Quinn", "Rakan", "Rammus", "Rek'Sai", 
+
+            "Rell", "Renata Glasc", "Renekton", "Rengar", "Riven", "Rumble", "Ryze", "Samira", "Sejuani", 
+
+            "Senna", "Seraphine", "Sett", "Shaco", "Shen", "Shyvana", "Singed", "Sion", "Sivir", "Skarner", 
+
+            "Sona", "Soraka", "Swain", "Sylas", "Syndra", "Tahm Kench", "Taliyah", "Talon", "Taric", "Teemo", 
+
+            "Thresh", "Tristana", "Trundle", "Tryndamere", "Twisted Fate", "Twitch", "Udyr", "Urgot", "Varus", 
+
+            "Vayne", "Veigar", "Vel'Koz", "Vex", "Vi", "Viego", "Viktor", "Vladimir", "Volibear", "Warwick", 
+
+            "Wukong", "Xayah", "Xerath", "Xin Zhao", "Yasuo", "Yone", "Yorick", "Yuumi", "Zac", "Zed", 
+
+            "Zeri", "Ziggs", "Zilean", "Zoe", "Zyra"
+
+        ];
+
+
+
+        function randomize() {
+
+            const randomIndex = Math.floor(Math.random() * nomes.length);
+
+            const randomName = nomes[randomIndex];
+
+            document.getElementById("result").innerText = randomName;
+
+        }
+
+    </script>
+
+</body>
+
+</html>
